@@ -1,15 +1,15 @@
 /* styles.css */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #121212;
     color: #ffffff;
+    overflow-x: hidden;
 }
 
 nav {
     background-color: rgba(0, 0, 0, 0.8);
-    color: #fff;
     padding: 1em 0;
     text-align: center;
     position: fixed;
@@ -33,12 +33,22 @@ nav ul li a {
     color: #fff;
     text-decoration: none;
     font-size: 1.2em;
+    position: relative;
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+    color: #ff4081;
+    text-shadow: 0 0 10px #ff4081;
 }
 
 section {
     padding: 100px 20px;
     text-align: center;
     min-height: 100vh;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
 }
 
 section:nth-child(even) {
@@ -48,6 +58,17 @@ section:nth-child(even) {
 section h1 {
     font-size: 2.5em;
     margin-bottom: 20px;
+    position: relative;
+}
+
+section h1::after {
+    content: '';
+    width: 50px;
+    height: 5px;
+    background: #ff4081;
+    display: block;
+    margin: 10px auto 0;
+    border-radius: 5px;
 }
 
 section p {
@@ -57,15 +78,96 @@ section p {
 
 #home {
     height: 100vh;
-    background: url('images/home-bg.jpg') no-repeat center center/cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('images/home-bg.jpg') no-repeat center center/cover;
     display: flex;
     justify-content: center;
     align-items: center;
+    color: #fff;
+    text-align: left;
 }
 
-#home h1 {
-    font-size: 3em;
+.hero-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 50px;
     animation: fadeIn 2s ease-in-out;
+}
+
+.intro-text {
+    max-width: 50%;
+    animation: slideInLeft 1.5s ease-out;
+}
+
+.intro-text h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.intro-text p {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.intro-image img {
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border: 5px solid #ff4081;
+    animation: slideInRight 1.5s ease-out;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 2px solid #ff4081;
+    color: #ff4081;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.btn:hover,
+.btn:focus {
+    background-color: #ff4081;
+    color: #fff;
+    box-shadow: 0 0 10px #ff4081, 0 0 20px #ff4081, 0 0 30px #ff4081;
+}
+
+.social-icons {
+    margin-top: 20px;
+}
+
+.social-icons a {
+    color: #fff;
+    font-size: 1.5em;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover,
+.social-icons a:focus {
+    color: #ff4081;
+    text-shadow: 0 0 10px #ff4081;
+}
+
+/* Project cards */
+.project {
+    background-color: rgba(255, 255, 255, 0.1);
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 600px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.project:hover,
+.project:focus {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-10px);
 }
 
 /* Animations */
@@ -78,14 +180,29 @@ section p {
     }
 }
 
-/* Additional animations */
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
 .fade-in {
     opacity: 1;
     transform: translateY(0);
-    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
-}
-
-section {
-    opacity: 0;
-    transform: translateY(20px);
 }

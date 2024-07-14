@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>Devadathan's Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body>
     <nav>
@@ -18,7 +19,21 @@
     </nav>
     
     <section id="home">
-        <h1>Welcome to My Portfolio</h1>
+        <div class="hero-content">
+            <div class="intro-text">
+                <h1>Hi, I'm Devadathan</h1>
+                <p>I am a passionate B.Tech student at Amrita Vishwa Vidyapeetham, specializing in Electronics and Computer Engineering.</p>
+                <a href="#projects" class="btn">View Projects</a>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            <div class="intro-image">
+                <img src="images/profile.jpg" alt="Devadathan">
+            </div>
+        </div>
     </section>
 
     <section id="about">
@@ -28,17 +43,22 @@
 
     <section id="projects">
         <h1>Projects</h1>
-        <p>Here are some of my projects...</p>
-        <ul>
-            <li>Project 1: Description of project 1</li>
-            <li>Project 2: Description of project 2</li>
-            <li>Project 3: Description of project 3</li>
-        </ul>
+        <div class="project">
+            <h2>Project 1</h2>
+            <p>Description of project 1</p>
+        </div>
+        <div class="project">
+            <h2>Project 2</h2>
+            <p>Description of project 2</p>
+        </div>
+        <div class="project">
+            <h2>Project 3</h2>
+            <p>Description of project 3</p>
+        </div>
     </section>
 
     <section id="skills">
         <h1>Skills</h1>
-        <p>Here are some of my skills...</p>
         <ul>
             <li>Skill 1</li>
             <li>Skill 2</li>
@@ -48,7 +68,7 @@
 
     <section id="contact">
         <h1>Contact</h1>
-        <p>You can reach me at email@example.com</p>
+        <p>You can reach me at <a href="mailto:email@example.com">email@example.com</a></p>
     </section>
 
     <script src="script.js"></script>
