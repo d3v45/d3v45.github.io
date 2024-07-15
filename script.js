@@ -7,6 +7,11 @@ document.querySelectorAll('nav a').forEach(anchor => {
         document.querySelector(this.getAttribute('href')).scrollIntoView({
             behavior: 'smooth'
         });
+
+        // Close the mobile menu after clicking a link
+        if (window.innerWidth <= 768) {
+            navLinks.classList.remove('show');
+        }
     });
 });
 
@@ -16,6 +21,7 @@ const navLinks = document.getElementById('nav-links');
 
 menuIcon.addEventListener('click', () => {
     navLinks.classList.toggle('show');
+    menuIcon.classList.toggle('active');
 });
 
 // Intersection Observer for animations

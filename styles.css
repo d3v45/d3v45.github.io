@@ -288,3 +288,26 @@ section p {
     opacity: 1;
     transform: translateY(0);
 }
+/* styles.css */
+
+/* Additional CSS for menu toggle animation */
+.menu-icon.active .fas {
+    transform: rotate(90deg);
+}
+
+nav ul {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+nav ul.show {
+    display: flex;
+    transform: translateY(0);
+    opacity: 1;
+}
+
+@media screen and (max-width: 768px) {
+    nav ul {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+}
