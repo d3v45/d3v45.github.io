@@ -22,10 +22,12 @@ nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 nav ul li {
-    display: inline;
     margin: 0 15px;
 }
 
@@ -168,6 +170,55 @@ section p {
 .project:focus {
     background-color: rgba(255, 255, 255, 0.2);
     transform: translateY(-10px);
+}
+
+@media screen and (max-width: 768px) {
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .intro-text, .intro-image {
+        max-width: 100%;
+    }
+    .intro-image img {
+        width: 200px;
+        height: 200px;
+    }
+    .btn {
+        font-size: 1em;
+    }
+    nav ul li {
+        margin: 10px 0;
+    }
+    section {
+        padding: 50px 20px;
+    }
+    section h1 {
+        font-size: 2em;
+    }
+    section p {
+        font-size: 1em;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    nav ul li {
+        margin: 5px 0;
+    }
+    .intro-text h1 {
+        font-size: 2em;
+    }
+    .intro-text p {
+        font-size: 1.2em;
+    }
+    .intro-image img {
+        width: 150px;
+        height: 150px;
+    }
+    .btn {
+        font-size: 0.9em;
+        padding: 8px 16px;
+    }
 }
 
 /* Animations */
