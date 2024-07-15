@@ -11,6 +11,7 @@ document.querySelectorAll('nav a').forEach(anchor => {
         // Close the mobile menu after clicking a link
         if (window.innerWidth <= 768) {
             navLinks.classList.remove('show');
+            menuIcon.classList.remove('active');
         }
     });
 });
