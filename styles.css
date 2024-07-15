@@ -11,11 +11,31 @@ body {
 nav {
     background-color: rgba(0, 0, 0, 0.8);
     padding: 1em 0;
-    text-align: center;
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+}
+
+.brand {
+    font-size: 1.5em;
+    color: #fff;
+    text-decoration: none;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 1.5em;
+    cursor: pointer;
+    color: #fff;
 }
 
 nav ul {
@@ -23,8 +43,7 @@ nav ul {
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    align-items: center;
 }
 
 nav ul li {
@@ -187,8 +206,20 @@ section p {
     .btn {
         font-size: 1em;
     }
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
     nav ul li {
         margin: 10px 0;
+    }
+    .menu-icon {
+        display: block;
+    }
+    nav ul.show {
+        display: flex;
     }
     section {
         padding: 50px 20px;
