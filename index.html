@@ -53,17 +53,36 @@
 
     <section id="projects">
         <h1>Projects</h1>
-        <div class="project">
-            <h2>Project 1</h2>
-            <p>Description of project 1</p>
-        </div>
-        <div class="project">
-            <h2>Project 2</h2>
-            <p>Description of project 2</p>
-        </div>
-        <div class="project">
-            <h2>Project 3</h2>
-            <p>Description of project 3</p>
+        <div class="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="images/project1.jpg" alt="Project 1" loading="lazy">
+                    <div class="carousel-caption">
+                        <h2>Project 1</h2>
+                        <p>Description of project 1</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="images/project2.jpg" alt="Project 2" loading="lazy">
+                    <div class="carousel-caption">
+                        <h2>Project 2</h2>
+                        <p>Description of project 2</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="images/project3.jpg" alt="Project 3" loading="lazy">
+                    <div class="carousel-caption">
+                        <h2>Project 3</h2>
+                        <p>Description of project 3</p>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#" role="button" data-slide="prev">
+                <span class="fas fa-chevron-left" aria-hidden="true"></span>
+            </a>
+            <a class="carousel-control-next" href="#" role="button" data-slide="next">
+                <span class="fas fa-chevron-right" aria-hidden="true"></span>
+            </a>
         </div>
     </section>
 
@@ -78,10 +97,16 @@
 
     <section id="contact">
         <h1>Contact</h1>
-        <p>You can reach me at <a href="mailto:email@example.com">email@example.com</a></p>
+        <form id="contact-form">
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+            <input type="email" id="email" name="email" placeholder="Your Email" required>
+            <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+            <button type="submit" class="btn">Send Message</button>
+        </form>
     </section>
 
-    <button id="dark-mode-toggle" class="dark-mode-toggle">Toggle Dark Mode</button>
+    <button id="scroll-top" class="scroll-top"><i class="fas fa-chevron-up"></i></button>
+    <button id="dark-mode-toggle" class="dark-mode-toggle">🌙</button>
 
     <script src="script.js"></script>
 </body>
