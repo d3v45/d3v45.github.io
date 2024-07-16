@@ -21,6 +21,7 @@ document.querySelectorAll('nav a').forEach(anchor => {
 const menuIcon = document.getElementById('menu-icon');
 const navLinks = document.getElementById('nav-links');
 const backdrop = document.getElementById('backdrop');
+const closeBtn = document.getElementById('close-btn');
 
 menuIcon.addEventListener('click', () => {
     navLinks.classList.toggle('show');
@@ -30,6 +31,13 @@ menuIcon.addEventListener('click', () => {
 
 // Close the menu when clicking on the backdrop
 backdrop.addEventListener('click', () => {
+    navLinks.classList.remove('show');
+    menuIcon.classList.remove('active');
+    backdrop.classList.remove('show');
+});
+
+// Close the menu when clicking on the close button
+closeBtn.addEventListener('click', () => {
     navLinks.classList.remove('show');
     menuIcon.classList.remove('active');
     backdrop.classList.remove('show');

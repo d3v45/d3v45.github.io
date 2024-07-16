@@ -233,6 +233,9 @@ section p {
     nav ul li {
         margin: 20px 0;
     }
+    nav ul li a {
+        font-size: 2em; /* Increase font size for mobile menu items */
+    }
     section {
         padding: 50px 20px;
     }
@@ -244,23 +247,14 @@ section p {
     }
 }
 
-/* Backdrop styles */
-.backdrop {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.7);
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    z-index: 999;
-}
-
-.backdrop.show {
-    display: block;
-    opacity: 1;
+/* Close button styles */
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 2em;
+    color: #fff;
+    cursor: pointer;
 }
 
 @media screen and (max-width: 480px) {
@@ -281,6 +275,25 @@ section p {
         font-size: 0.9em;
         padding: 8px 16px;
     }
+}
+
+/* Backdrop styles */
+.backdrop {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 999;
+}
+
+.backdrop.show {
+    display: block;
+    opacity: 1;
 }
 
 /* Animations */
