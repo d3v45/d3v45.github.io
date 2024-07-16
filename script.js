@@ -62,3 +62,10 @@ const observer = new IntersectionObserver((entries, observer) => {
 sections.forEach(section => {
     observer.observe(section);
 });
+
+// Dark mode toggle
+const darkModeToggle = document.getElementById('dark-mode-toggle');
+
+darkModeToggle.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+});
